@@ -3,13 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Equipment;
-use Illuminate\Http\Request;
+use App\Models\Laboratories;
 
 class EquipmentController extends Controller
 {
     public function index()
     {
         $equipments = Equipment::all();
-        return view('equipments', compact('equipments'));
+        return view('equipment', compact('equipments'));
+    }
+
+    public function labs()
+    {
+        $labs = Laboratories::all();
+        return view('laboratories', compact('labs'));
     }
 }

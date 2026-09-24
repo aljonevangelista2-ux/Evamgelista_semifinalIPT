@@ -9,13 +9,8 @@ class EquipmentFactory extends Factory
     public function definition(): array
     {
         return [
-            'equipmentname' => $this->faker->words(3, true),
-            'description' => $this->faker->randomElement([
-                'home & fashion', 
-                'electronics', 
-                'hardware', 
-                'perishable goods'
-            ]),
+            'equipmentname' => fake()->word() . ' ' . fake()->randomElement(['Microscope', 'Centrifuge', 'Beaker', 'Oscilloscope', 'Spectrometer']),
+            'description' => fake()->sentence(8),
         ];
     }
 }

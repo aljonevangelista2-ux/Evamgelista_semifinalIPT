@@ -1,5 +1,6 @@
 <?php
 
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\EquipmentController;
 
-Route::get('/equipments', [EquipmentController::class, 'index']);
+Route::get('/', [EquipmentController::class, 'index'])->name('equipment.index');
+Route::get('/labs', [EquipmentController::class, 'labs'])->name('labs.index');
